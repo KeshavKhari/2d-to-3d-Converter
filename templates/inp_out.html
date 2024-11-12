@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INPUT OUTPUT</title>
+    <link rel="stylesheet" href="../static/inp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaini&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Langar&family=Martian+Mono:wght@100..800&family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a class="nav" id="home" href="home.html">HOME</a>
+        <a class="nav" id="mesh" href="mesh.html">3-D MESH</a>
+        <a class="nav" id="about" href="About_us.html">ABOUT-US</a>
+        <a class="nav" id="feed" href="feed_back.html">FEEDBACK</a>   
+    </div>
+
+    <div id="input">INPUT</div>
+
+    <div id="drop_box">
+        <form id="uploadForm" action="/media/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file" name="file" accept="image/*" required />
+            <button type="submit">Upload Image</button>
+        </form>
+        <div id="uploadMessage" aria-live="polite" style="display: none; color: white;">Upload Successful</div>
+        <div id="loadingSpinner" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div id="previous">Past Projects</div>
+    <div id="line"></div>
+    <div id="output">OUTPUT</div>
+
+    <!-- Section to display the 3D visualization of the processed mesh -->
+    <div id="end_visual">
+        <h2>3D Visualization</h2>
+        <div id="mesh-container" style="display:none;">
+            <p>Here is your processed 3D mesh:</p>
+            <!-- Add your 3D model viewer or mesh display logic here -->
+            <iframe id="meshViewer" width="600" height="400" style="border: none;"></iframe>
+            <!-- This iframe can point to a 3D model viewer or display the mesh path -->
+        </div>
+    </div>
+
+    <a id="end_contact" href="contact_us.html">CONTACT US</a>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const formData = new FormData(this); // Create FormData object with the form data
+    
+            // Show the loading spinner
+            document.getElementById('loadingSpinner').style.display = 'block';
+            document.getElementById('uploadMessage').style.display = 'none'; // Hide the previous message
+    
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json()) // Parse JSON response
+            .then(data => {
+                // Hide the loading spinner
+                document.getElementById('loadingSpinner').style.display = 'none';
+
+                // Check if the upload was successful
+                if (data.success) {
+                    document.getElementById('uploadMessage').style.display = 'block'; // Show the success message
+                    document.getElementById('uploadMessage').textContent = data.message; // Set the message
+                    
+                    // Display the 3D mesh or visualization
+                    document.getElementById('mesh-container').style.display = 'block'; // Show the mesh container
+                    
+                    // Assuming the backend sends the mesh URL or path in the response
+                    const meshPath = data.mesh_path; // Get the mesh path from the response
+                    document.getElementById('meshViewer').src = meshPath; // Set the 3D model viewer source
+                    
+                } else {
+                    document.getElementById('uploadMessage').style.display = 'block';
+                    document.getElementById('uploadMessage').textContent = 'Upload Failed: ' + data.message;
+                }
+
+                // Reset the form for the next upload
+                this.reset(); // Reset the form
+            })
+            .catch(error => {
+                document.getElementById('loadingSpinner').style.display = 'none';
+                console.error('Error:', error); // Handle errors
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISUAL 3-D WEBPAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="page_heading">
+            VISUAL-3D
+        </h1>
+    </header>
+
+    <div id="login">
+        <div id="user1_head">
+            Email-Id or username
+        </div>
+        <div id="password1">
+            Password
+        </div>
+        <!-- Updated login form -->
+        <form action="/login" method="POST">
+            <input id="input1" name="username" type="text" placeholder="EMAIL-ID OR USERNAME" required>
+            <input id="input2" name="password" type="password" placeholder="PASSWORD" required>
+            <button id="log_button" type="submit">LOGIN</button>
+        </form>
+        <div id="write_up1">
+            Already a user? Login to your account
+        </div>
+    </div>
+
+    <div id="sign">
+        <div id="user2_head">
+            Email-Id 
+        </div>
+        <div id="username">
+            Username
+        </div>
+        <div id="password2">
+            Password
+        </div>
+        <!-- Updated sign-up form -->
+        <form action="/signup" method="POST">
+            <input id="input3" name="username" type="text" placeholder="USERNAME" required>
+            <input id="input4" name="email" type="text" placeholder="EMAIL-ID" required>
+            <input id="input5" name="password" type="password" placeholder="PASSWORD" required>
+            <button id="sign_button" type="submit">SIGN UP</button>
+        </form>
+        <div id="write_up2">
+            New user? Sign up to get started
+        </div> 
+    </div>
+
+    <div id="last_text">
+        Enter into a Journey of Visualizing your 2-D World
+    </div>
+    <div id="line"></div>
+</body>
+</html>

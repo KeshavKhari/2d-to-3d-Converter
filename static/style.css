@@ -1,0 +1,242 @@
+*{padding:0;
+margin:0;}
+body{
+    background-color: black;
+}
+
+#page_heading{
+    position:absolute;
+    color: white;
+    font-family: Michroma;
+    font-size:  70px; 
+    width:840px;
+    height:82px;
+    left: 493px;
+}
+
+#login{
+    position:absolute;
+    width: 526px;
+    height: 553px;
+    left:157px;
+    top: 111px;
+    background-color:rgb(197, 216, 209,0.48);
+    border-radius: 44px;
+    z-index: -2;
+
+}
+
+#user1_head{
+    position: absolute;
+    left:91px;
+    top: 49px;
+    font-size: 25px;
+    color: white;
+    font-family: Michroma;
+
+}
+
+#password1{
+position: absolute;
+top:183px;
+left:91px;
+font-size:25px;
+color: white;
+font-family:Michroma;
+}
+
+#input1{
+position: absolute;
+left:85px;
+width: 382px;
+height: 63.43px;
+top:89px;
+font-size:21px;
+color:#E5E5E5;
+border:2px solid white;
+border-radius: 7px;
+background-color: rgba(197, 216, 209,0.48);
+color:rgba(0, 0, 0, 0.74);
+font-family:Inter;
+
+
+}
+
+#input2{
+position: absolute;
+top:221px;
+left:85px;
+width:382px;
+height:63.43px;
+font-size:21px;
+border:2px solid white;
+border-radius:7px;
+background-color:rgba(197, 216, 209,0.48);
+color:rgba(7, 0, 0, 0.74);
+font-family: Inter;
+
+}
+
+#write_up1{
+    position: absolute;
+    font-size: 20px;
+    top:439px;
+    left:112px;
+    color:white;
+    font-family: Langar;
+}
+
+#log_button{
+    position: absolute;
+    font-size:36px;
+    top:475px;
+    left:131px;
+    color:white;
+    background-color:#12263A ;
+    border:none;
+    border-radius: 126px;
+    width:230px;
+    height:70px;
+    font-family: Kodchasan;
+}
+
+#log_button:hover{
+
+    background-color: black ;
+}
+
+
+#sign{
+    position:absolute;
+    width: 526px;
+    height: 553px;
+    left:845px;
+    top: 111px;
+    background-color:rgb(197, 216, 209,0.48);
+    border-radius: 44px;
+    z-index: -2;
+
+}
+
+#user2_head{
+    position: absolute;
+    left:91px;
+    top: 183px;
+    font-size: 25px;
+    color: white;
+    font-family: Michroma;
+
+}
+
+#password2{
+position: absolute;
+top:313px;
+left:91px;
+font-size:25px;
+color: white;
+font-family: Michroma;
+}
+
+#username{
+    position: absolute;
+    top:49px;
+    left:91px;
+    font-size:25px;
+    color: white;
+    font-family: Michroma;
+    }
+
+#input3{
+position: absolute;
+left:85px;
+width: 382px;
+height: 63.43px;
+top:89px;
+font-size:21px;
+color:#E5E5E5;
+border:2px solid white;
+border-radius: 7px;
+background-color: rgba(197, 216, 209,0.48);
+color:rgba(0, 0, 0, 0.74);
+font-family:Inter;
+
+
+}
+
+#input4{
+position: absolute;
+top:221px;
+left:85px;
+width:382px;
+height:63.43px;
+font-size:21px;
+border:2px solid white;
+border-radius:7px;
+background-color:rgba(197, 216, 209,0.48);
+color:rgba(0, 0, 0, 0.74);
+font-family: Inter;
+
+}
+
+#input5{
+    position: absolute;
+    top:350px;
+    left:85px;
+    width:382px;
+    height:63.43px;
+    font-size:21px;
+    border:2px solid white;
+    border-radius:7px;
+    background-color:rgba(197, 216, 209,0.48);
+    color:rgba(0, 0, 0, 0.74);
+    font-family: Inter;
+    
+    }
+
+#write_up2{
+    position: absolute;
+    font-size: 20px;
+    top:439px;
+    left:118px;
+    color:white;
+    font-family:Langar ;
+
+}
+
+#sign_button{
+    position: absolute;
+    font-size:36px;
+    top:475px;
+    left:131px;
+    color:white;
+    background-color:#12263A ;
+    border:none;
+    border-radius: 126px;
+    width:230px;
+    height:70px;
+    font-family: Kodchasan;
+
+}
+
+#sign_button:hover{
+    background-color: black;
+    color:white;
+}
+
+#last_text{
+    position: absolute;
+    font-size:16px ;
+    color:white;
+    font-family: Martian Mono;
+    top:683px;
+    left:497px;
+}
+
+#line{
+    position: absolute;
+    background-color: white;
+    height:530px;
+    top:116px;
+    left:762px;
+    border:1px solid white;
+}
